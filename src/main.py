@@ -1,12 +1,10 @@
-
-# ASTEROIDE SINGLEPLAYER v1.0
-# This file starts the application and launches the main game loop.
+# ASTEROIDE MULTIPLAYER v2.0
+# Entry point — starts the application and runs the main loop.
 
 from game import Game
 
 
 def main():
-    # Start the game instance and run the main loop.
     Game().run()
 
 
