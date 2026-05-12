@@ -279,7 +279,7 @@ class World:
         mins = int(rem)//60
         secs = int(rem)%60
         tt   = big.render(f"{mins}:{secs:02d}", True, C.WHITE)
-        surf.blit(tt, tt.get_rect(centerx=C.WIDTH//2, top=6))
+        surf.blit(tt, tt.get_rect(centerx=C.WIDTH//2, top=26))
 
         # Indicadores de reaparecer
         for pid in range(self.num_players):

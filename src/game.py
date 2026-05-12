@@ -74,7 +74,7 @@ class Game:
         self.clock  = pg.time.Clock()
         self.font   = pg.font.SysFont("consolas", 18)
         self.med    = pg.font.SysFont("consolas", 26)
-        self.big    = pg.font.SysFont("consolas", 48)
+        self.big    = pg.font.SysFont("consolas", 28)
         self.small  = pg.font.SysFont("consolas", 15)
 
         # Configurações da partida (definidas no menu)
