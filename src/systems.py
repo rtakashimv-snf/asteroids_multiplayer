@@ -112,9 +112,9 @@ class World:
         self._add_bullets(ship.fire_special())
 
     # ------------------------------------------------------------------
-    def _ship_hit(self, ship):
+    def _ship_hit(self, ship, damage=1):
         if ship.invuln > 0: return
-        ship.hp -= 1
+        ship.hp -= damage
         if ship.hp <= 0:
             ship.hp = C.SHIP_MAX_HP
             self.lives[ship.player_id] -= 1
@@ -227,7 +227,10 @@ class World:
                 if not ship.alive_flag: continue
                 if (ship.pos-b.pos).length() < (ship.r + b.r):
                     b.kill()
-                    self._ship_hit(ship)
+                    if isinstance(b, ChargedBullet):
+                        self._ship_hit(ship, C.CHARGED_DAMAGE)
+                    else:
+                        self._ship_hit(ship)
                     # Pontos por acertar outro jogador
                     self.ships[b.owner].score += 150
                     break
