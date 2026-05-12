@@ -139,4 +139,4 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 
 ## 👤 Autor
 
-Desenvolvido por [@rtakashimv-snf](https://github.com/rtakashimv-snf)
+Desenvolvido por Rubens Takashi, Matheus Takashi e Vinicius Castro
